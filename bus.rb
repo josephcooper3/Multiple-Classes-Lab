@@ -1,6 +1,6 @@
 class Bus
 
-  attr_reader :passengers
+  attr_accessor :passengers
 
   def initialize(route_number, destination, passengers)
     @route_number = route_number
@@ -22,6 +22,10 @@ class Bus
 
   def drop_off(person)
     @passengers.delete(person)
+  end
+
+  def empty_bus()
+    @passengers = []
   end
 
 end
