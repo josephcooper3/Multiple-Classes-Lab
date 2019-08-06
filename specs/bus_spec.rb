@@ -1,6 +1,7 @@
 require('minitest/autorun')
 require('minitest/rg')
 require_relative('../bus.rb')
+require_relative('../person.rb')
 
 class BusTest < Minitest::Test
 
@@ -14,6 +15,11 @@ class BusTest < Minitest::Test
 
   def test_number_of_passengers
     assert_equal(0, @bus1.number_of_passengers())
+  end
+
+  def test_pick_up
+    @bus1.pick_up(@person1)
+    assert_equal(1, @bus1.number_of_passengers())
   end
 
 end
