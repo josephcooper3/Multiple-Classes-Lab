@@ -5,7 +5,7 @@ class Bus
   def initialize(route_number, destination, passengers)
     @route_number = route_number
     @destination = destination
-    @passengers = passengers
+    @passengers = []
   end
 
   def make_engine_noise
@@ -13,7 +13,7 @@ class Bus
   end
 
   def number_of_passengers
-    return @passengers.length()
+     @passengers.length()
   end
 
   def pick_up(person)
