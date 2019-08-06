@@ -6,6 +6,8 @@ class PersonTest < Minitest::Test
 
   def setup
     @person1 = Person.new("John", 55)
+    @person2 = Person.new("Paul", 25)
+    @person3 = Person.new("Ringo", 15)
   end
 
   def test_person_name

@@ -1,9 +1,11 @@
 class Bus
 
-  def initialize(route_number, destination)
+  attr_reader :passengers
+
+  def initialize(route_number, destination, passengers)
     @route_number = route_number
     @destination = destination
-    @passengers = []
+    @passengers = passengers
   end
 
   def make_engine_noise
@@ -16,6 +18,10 @@ class Bus
 
   def pick_up(person)
     @passengers.push(person)
+  end
+
+  def drop_off(person)
+    @passengers.delete(person)
   end
 
 end
